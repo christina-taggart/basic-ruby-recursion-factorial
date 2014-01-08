@@ -7,4 +7,13 @@ end
 
 # Implement a recursive version of the factorial function
 def factorial_recursive(n)
+  if n==0
+    return 1
+  else
+    n*factorial_recursive(n-1)
+  end
+
+
+  #1.upto(n).inject {|product, x| product * x}
+  #1.upto(n).inject(:*)
 end
