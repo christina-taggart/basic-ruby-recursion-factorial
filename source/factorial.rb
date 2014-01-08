@@ -13,7 +13,12 @@ def factorial_iterative(number)
 end
 
 # Implement a recursive version of the factorial function
-def factorial_recursive(n)
+def factorial_recursive(number)
+  if n > 1
+    factorial_recursive(number - 1) * number
+  elsif number == 1 || number == 0
+    1
+  end
 end
 
 puts factorial_iterative 1
