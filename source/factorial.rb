@@ -14,11 +14,8 @@ end
 
 # Implement a recursive version of the factorial function
 def factorial_recursive(number)
-  if n > 1
-    factorial_recursive(number - 1) * number
-  elsif number == 1 || number == 0
-    1
-  end
+  return nil if number < 0
+  n > 1 ? factorial_recursive(number - 1) * number : 1
 end
 
 puts factorial_iterative 1
