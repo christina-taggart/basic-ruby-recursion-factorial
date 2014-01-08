@@ -11,9 +11,11 @@ end
 
 # Implement a recursive version of the factorial function
 def factorial_recursive(n)
+  return 1 if n == 0 || n == 1
+  n * factorial_recursive(n-1)
 end
 
-#-----drivers-----
+#-----Drivers-----
 puts "iterative:"
 p factorial_iterative(0) == 1
 p factorial_iterative(3) == 6
@@ -25,3 +27,19 @@ p factorial_recursive(0) == 1
 p factorial_recursive(3) == 6
 p factorial_recursive(5) == 120
 p factorial_recursive(10) == 3628800
+
+#-----When does it break?-----
+
+# Stack level too deep at 8188!
+# n = 1
+# while n
+#   puts "testing #{n}!: " + factorial_recursive(n).to_s
+#   n += 1
+# end
+
+# Won't break anytime soon, reached 7590! before I interrupted.
+# n = 1
+# while n
+#   puts "testing #{n}!: " + factorial_iterative(n).to_s
+#   n += 1
+# end
