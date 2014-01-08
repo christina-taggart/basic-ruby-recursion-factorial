@@ -17,7 +17,11 @@ p factorial_iterative(3) != 472
 
 # Implement a recursive version of the factorial function
 def factorial_recursive(n)
-
+  if n==0
+    1
+  else
+    n * factorial_recursive(n-1)
+  end
 end
 
 p factorial_recursive(0) == 1
